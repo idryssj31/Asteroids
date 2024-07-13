@@ -10,7 +10,7 @@ int main()
     sf::CircleShape shape(100.f);
     shape.setFillColor(sf::Color::Red);
     auto starship = Starship();
-
+    auto chrono = sf::Clock();
     while (window.isOpen())
     {
         sf::Event event;
@@ -18,9 +18,9 @@ int main()
         {
             if (event.type == sf::Event::Closed)
                 window.close();
-            starship.Move();
+            starship.UpdateBoostStatus(event);
         }
-
+        starship.UpdateMovement(chrono.restart().asSeconds());
         window.clear();
         window.draw(shape);
         starship.Display(window);

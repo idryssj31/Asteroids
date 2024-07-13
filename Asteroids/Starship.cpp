@@ -11,12 +11,29 @@ Starship::~Starship()
 	//std::cout << "Good bye";
 }
 
-void Starship::Move()
+void Starship::UpdateBoostStatus(sf::Event const& event)
 {
-	m_sprite.move(10, 10);
+	if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Up)
+	{
+		m_boost = true;
+	}
+	else if (event.type == sf::Event::KeyReleased && event.key.code == sf::Keyboard::Up)
+	{
+		m_boost = false;
+	}
 }
 
-void Starship::Display(sf::RenderWindow& window)
+void Starship::UpdateMovement(float time)
+{
+	if (m_boost)
+	{
+		m_speed += ACCELERATION * time;
+	}
+	m_speed -= m_speed * COEFFICIENT_FRICTION * time;
+	m_sprite.move(m_speed * time, 0);
+}
+
+void Starship::Display(sf::RenderWindow& window) const
 {
 	window.draw(m_sprite);
 }
