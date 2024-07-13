@@ -18,8 +18,8 @@ int main()
         {
             if (event.type == sf::Event::Closed)
                 window.close();
-            starship.UpdateBoostStatus(event);
         }
+        starship.UpdateBoostStatus();
         starship.UpdateMovement(chrono.restart().asSeconds());
         window.clear();
         window.draw(shape);

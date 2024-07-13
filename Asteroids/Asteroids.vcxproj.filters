@@ -33,9 +33,15 @@
     <ClCompile Include="Starship.cpp">
       <Filter>Fichiers sources\Player</Filter>
     </ClCompile>
+    <ClCompile Include="Vector.cpp">
+      <Filter>Fichiers sources\Player</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Starship.h">
+      <Filter>Fichiers d%27en-tête\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector.h">
       <Filter>Fichiers d%27en-tête\Player</Filter>
     </ClInclude>
   </ItemGroup>
