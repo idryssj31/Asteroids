@@ -13,17 +13,35 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Fichiers d%27en-tête\Player">
-      <UniqueIdentifier>{c110238c-76a2-477f-a01b-2349726bab7f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Fichiers sources\Player">
-      <UniqueIdentifier>{a0528b17-0a92-4b9c-91b7-93b024c51285}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Fichiers d%27en-tête\Windows">
       <UniqueIdentifier>{66bb8ef8-8ae2-4489-a084-f889a829593e}</UniqueIdentifier>
     </Filter>
     <Filter Include="Fichiers sources\Windows">
       <UniqueIdentifier>{b01aee2f-f38c-4c52-abd0-3b8fbf47968c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Entity">
+      <UniqueIdentifier>{c96f9546-0230-41ad-b747-d9e986fea28a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Entity\Player">
+      <UniqueIdentifier>{a0528b17-0a92-4b9c-91b7-93b024c51285}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Entity\Asteroid">
+      <UniqueIdentifier>{33959216-a2f9-49f7-8cca-d07ef02dc2ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Entity">
+      <UniqueIdentifier>{19a7324d-be40-4c21-9794-d2c05dd4b683}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Entity\Player">
+      <UniqueIdentifier>{c110238c-76a2-477f-a01b-2349726bab7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Entity\Asteroid">
+      <UniqueIdentifier>{54dc0049-236a-40e0-8a21-4abfe4a607bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Scene">
+      <UniqueIdentifier>{68acb6d3-e28d-409b-bbac-c7e01cb817f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Scene">
+      <UniqueIdentifier>{2b954887-3222-4fac-a00f-db477f8f45e0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -31,18 +49,36 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="Starship.cpp">
-      <Filter>Fichiers sources\Player</Filter>
+      <Filter>Fichiers sources\Entity\Player</Filter>
     </ClCompile>
     <ClCompile Include="Vector.cpp">
-      <Filter>Fichiers sources\Player</Filter>
+      <Filter>Fichiers sources\Entity\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Fichiers sources\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="Asteroid.cpp">
+      <Filter>Fichiers sources\Entity\Asteroid</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>Fichiers sources\Scene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Starship.h">
-      <Filter>Fichiers d%27en-tête\Player</Filter>
+      <Filter>Fichiers d%27en-tête\Entity\Player</Filter>
     </ClInclude>
     <ClInclude Include="Vector.h">
-      <Filter>Fichiers d%27en-tête\Player</Filter>
+      <Filter>Fichiers d%27en-tête\Entity\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Fichiers d%27en-tête\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Asteroid.h">
+      <Filter>Fichiers d%27en-tête\Entity\Asteroid</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>Fichiers d%27en-tête\Scene</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
