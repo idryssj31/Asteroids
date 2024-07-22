@@ -14,7 +14,7 @@ public:
 	Entity(std::string_view const& a);
 
 public: // Methods
-	void UpdateMovement(float _time);
+	virtual void UpdateMovement(float _time);
 	void Display(sf::RenderWindow& _window) const;
 
 	void Init();

@@ -35,7 +35,7 @@ int main()
         }
         starship.UpdateBoostStatus();
         auto timeLoop = chrono.restart().asSeconds();
-        for (Entity* element : elements)
+        for (auto* element : elements)
         {
             element->UpdateMovement(timeLoop);
         }
