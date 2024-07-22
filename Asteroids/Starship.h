@@ -5,8 +5,10 @@
 
 // Game includes
 #include "Vector.h"
+#include "Entity.h"
+#include "Map.h"
 
-class Starship
+class Starship : public Entity
 {
 public:
 	// Constructor
@@ -17,15 +19,9 @@ public:
 
 public: // Methods 
 	void UpdateBoostStatus();
-	void UpdateMovement(float time);
-	void Display(sf::RenderWindow& window) const;
+	void UpdateMovement(float _time);
 
 private: // Attributes
-	sf::Texture m_texture;
-	sf::Sprite m_sprite;
-	sf::Color m_color;
-
-	Vector m_speed = {0.f, 0.f};
 	bool m_boost = false;
 	bool m_turnRight = false;
 	bool m_turnLeft = false;
@@ -34,10 +30,9 @@ private: // Attributes
 	static constexpr float COEFFICIENT_FRICTION = 2.f;
 	static constexpr float ANGULAR_VELOCITY = 50.f;
 
+	Map location;
+
 protected: // Methods
-	void Init();
-	void SetTexture();
-	void SetSprite();
-	void SetColor();
+
 };
 
