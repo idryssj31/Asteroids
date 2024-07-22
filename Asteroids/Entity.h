@@ -26,8 +26,8 @@ protected: // Attributes
 	sf::Texture m_texture;
 	sf::Sprite m_sprite;
 	sf::Color m_color;
-	Map location;
-
+	Map position;
+	float m_angularSpeed;
 	Vector m_speed = { 0.f, 0.f };
 
 };

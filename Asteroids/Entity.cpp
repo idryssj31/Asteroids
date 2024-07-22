@@ -12,7 +12,9 @@ Entity::Entity(std::string_view const& _imagePath)
 void Entity::UpdateMovement(float _time)
 {
 	auto movement = m_speed * _time;
+	position += movement;
 	m_sprite.move(movement.x, movement.y);
+	m_sprite.rotate(m_angularSpeed * _time);
 }
 
 void Entity::Display(sf::RenderWindow& _window) const
@@ -45,7 +47,7 @@ void Entity::SetSprite()
 {
 	m_sprite.setTexture(m_texture);
 	m_sprite.setOrigin(m_sprite.getLocalBounds().width / 2, m_sprite.getLocalBounds().height / 2);
-	m_sprite.setPosition(location.getX(), location.getY());
+	m_sprite.setPosition(position.getX(), position.getY());
 }
 
 void Entity::SetColor()

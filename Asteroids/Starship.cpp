@@ -24,15 +24,19 @@ void Starship::UpdateMovement(float _time)
 		m_speed += Vector::AngleOrigin(ACCELERATION* _time, m_sprite.getRotation());
 	}
 	m_speed -= m_speed * COEFFICIENT_FRICTION * _time;
-	Entity::UpdateMovement(_time);
 	if (m_turnLeft)
 	{
-		m_sprite.rotate(-ANGULAR_VELOCITY * _time);
+		m_angularSpeed = -ANGULAR_VELOCITY;
 	}
-	if (m_turnRight)
+	else if (m_turnRight)
 	{
-		m_sprite.rotate(ANGULAR_VELOCITY * _time);
+		m_angularSpeed = ANGULAR_VELOCITY;
 	}
+	else
+	{
+		m_angularSpeed = 0;
+	}
+	Entity::UpdateMovement(_time);
 }
 
 
