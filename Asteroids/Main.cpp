@@ -39,6 +39,13 @@ int main()
         {
             element->UpdateMovement(timeLoop);
         }
+        for (auto* element : elements)
+        {
+            if (element != &starship)
+            {
+                element->CollisionTest(starship);
+            }
+        }
         window.clear();
         for (auto* element : elements)
         {
